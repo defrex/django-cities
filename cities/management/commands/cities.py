@@ -14,6 +14,7 @@ http://download.geonames.org/export/zip/
 - Postal Codes:         allCountries.zip
 """
 
+from __future__ import print_function
 import os
 import sys
 import urllib
@@ -490,7 +491,7 @@ class Command(BaseCommand):
             try:
                 pc.save()
             except Exception as e:
-                print e
+                print(e)
 
     def flush_country(self):
         self.logger.info("Flushing country data")
